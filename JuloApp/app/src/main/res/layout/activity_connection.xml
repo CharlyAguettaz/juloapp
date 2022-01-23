@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_layout"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+
+    >
+
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F44336"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#ED9E99"
+        android:textSize="18dp"
+        android:visibility="gone"
+        android:layout_gravity="top"
+        tools:ignore="RtlCompat" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="50dp"
+        android:layout_margin="15dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardBackgroundColor="#222222"
+        app:contentPadding="0dp"
+        >
+
+        <TextView
+            android:layout_width="171dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:gravity="center_horizontal"
+            android:text="Register with your instagram account"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            >
+
+            <EditText
+                android:id="@+id/mail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_perso"
+                android:ems="10"
+                android:hint="Mail"
+                android:textColorHint="#6E6E6E"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:layout_margin="5dp"/>
+
+            <EditText
+                android:id="@+id/pass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/et_perso"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPersonName"
+                android:password="true"
+                android:textColor="@color/black"
+                android:textColorHint="#6E6E6E"
+                tools:ignore="Deprecated" />
+
+
+            <Button
+                android:id="@+id/connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_perso"
+                android:text="Connection"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/trans" />
+
+            <TextView
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_margin="10dp"
+                android:text="New user? Register Now"
+                android:onClick="methode"
+                tools:ignore="OnClick"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal" />
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
